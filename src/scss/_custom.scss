@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=Quattrocento");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.75em;
+  font-size: 22px;
+  background-color: #222;
+  color: #aaa;
+}
+
+.card {
+  background-color: #333;
+  margin: 15px;
+}
+
+.bio {
+  top: auto;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.nav {
+  margin-top: 10vw;
+  position: fixed;
+}
+
+#bannerImage {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  left: 0;
+  top: 0;
+  // object-position: 50% 50%;
+  // object-fit: cover;
+}
+
+#bannerImage {
+  display: flex;
+  align-items: flex-end;
+  height: 30vw;
+  width: 100vw;
+  overflow: hidden;
+}
+
+@media (min-width: 48em) {
+  #bannerImage {
+    height: 30vw;
+    margin-top: 10%;
+    width: 70vw;
+  }
+
+  body {
+    // overflow: hidden;
+  }
+  .content {
+    padding: 2em 3em 0;
+    margin-left: 25%;
+  }
+
+  .header {
+    margin: 20% 2em 0;
+    text-align: right;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.section {
+  text-align: center;
+}
+
+.section-link {
+  font-family: "Oswald";
+  color: #ae8d09;
+  margin: 5px;
+}
+
+a,
+a:visited {
+  color: #ae8d09;
+}
+
+a:hover {
+  color: #858585;
+}
+
+h1 {
+  font-size: 48px;
+  font-family: "Oswald";
+}
+
+p {
+  font-family: "Quattrocento";
+}

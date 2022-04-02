@@ -1,0 +1,43 @@
+doctype html
+
+block config
+    - var pageTitle = "Page Title"
+
+html(lang='en')
+
+    head
+
+        include includes/head/meta.pug
+        include includes/head/title.pug
+        include includes/head/css.pug
+        include includes/head/icons.pug
+
+    body(class=bodyClass)
+
+      #content.puge-g
+
+        .nav.pure-u-1-8.centered
+            .sb-sidenav-menu-heading
+                |  Ari Asercion
+                br
+                |  Super cool lady
+        
+            a.nav-link(href='writing')
+                .sb-nav-link-icon
+                | Writing
+
+            a.nav-link(href='extra') 
+                .sb-nav-link-icon
+                | Extras 
+
+            a.nav-link(href='contact') 
+                .sb-nav-link-icon
+                | Contact
+
+        .pure-u-1-8
+        #layoutContent.pure-u-7-8
+            
+          main
+              block content
+
+        include includes/scripts.pug
