@@ -34,6 +34,13 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/index', (req, res) => {
+  const intro = fs.readFileSync('./content/intro.txt', 'UTF-8', 'r');
+  res.render('index', {
+    intro: intro,
+  });
+});
+
 app.get('/writing', (req, res) => {
   Article.find({}, function(err, writing) {
     res.render('writing', {

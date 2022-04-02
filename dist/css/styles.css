@@ -1871,9 +1871,10 @@ p {
   overflow: hidden;
 }
 
-@media (max-width: 48em) {
+@media (min-width: 48em) {
   #bannerImage {
-    margin-top: 0%;
+    margin-top: 10%;
+    width: 75vw;
   }
 }
 .section {
