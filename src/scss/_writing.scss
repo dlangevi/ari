@@ -1,0 +1,47 @@
+.card {
+  background-color: #333;
+  margin: 15px;
+}
+
+#writingBackground {
+  position: fixed;
+  z-index: -1;
+}
+
+body {
+  //  overflow: hidden;
+}
+
+#writings {
+  opacity:0;
+}
+
+.show {
+  display:block;
+}
+
+.slideIn {
+  display:block;
+  animation-duration: 3s;
+  animation-name: slideInUp;
+  animation-fill-mode: forwards;
+
+}
+
+.left {
+  margin-left: 5%;
+  margin-right: auto;
+  text-align: left;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0.95;
+    transform: translate3d(0, 0, 0);
+  }
+}

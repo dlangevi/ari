@@ -1,0 +1,28 @@
+#bannerImage {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+  height: 30vw;
+  width: 100vw;
+  overflow: hidden;
+}
+
+@media (max-width: 48em) {
+  #bannerImage {
+    margin-top: 0%;
+  }
+}
+
+.section {
+  text-align: center;
+}
+
+.section-link {
+  font-family: "Oswald";
+  color: #ae8d09;
+  margin: 5px;
+}

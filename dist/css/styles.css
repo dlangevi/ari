@@ -1829,73 +1829,15 @@ body {
   color: #aaa;
 }
 
-.card {
-  background-color: #333;
-  margin: 15px;
-}
-
-.bio {
-  top: auto;
+.nav {
+  margin-top: 10vw;
+  position: fixed;
 }
 
 .centered {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-}
-
-.nav {
-  margin-top: 10vw;
-  position: fixed;
-}
-
-#bannerImage {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  left: 0;
-  top: 0;
-}
-
-#bannerImage {
-  display: flex;
-  align-items: flex-end;
-  height: 30vw;
-  width: 100vw;
-  overflow: hidden;
-}
-
-@media (min-width: 48em) {
-  #bannerImage {
-    height: 30vw;
-    margin-top: 10%;
-    width: 70vw;
-  }
-
-  .content {
-    padding: 2em 3em 0;
-    margin-left: 25%;
-  }
-
-  .header {
-    margin: 20% 2em 0;
-    text-align: right;
-  }
-
-  .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-  }
-}
-.section {
-  text-align: center;
-}
-
-.section-link {
-  font-family: "Oswald";
-  color: #ae8d09;
-  margin: 5px;
 }
 
 a,
@@ -1914,4 +1856,88 @@ h1 {
 
 p {
   font-family: "Quattrocento";
+}
+
+#bannerImage {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+  height: 30vw;
+  width: 100vw;
+  overflow: hidden;
+}
+
+@media (max-width: 48em) {
+  #bannerImage {
+    margin-top: 0%;
+  }
+}
+.section {
+  text-align: center;
+}
+
+.section-link {
+  font-family: "Oswald";
+  color: #ae8d09;
+  margin: 5px;
+}
+
+.card {
+  background-color: #333;
+  margin: 15px;
+}
+
+#writingBackground {
+  position: fixed;
+  z-index: -1;
+}
+
+#writings {
+  opacity: 0;
+}
+
+.show {
+  display: block;
+}
+
+.slideIn {
+  display: block;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slideInUp;
+          animation-name: slideInUp;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.left {
+  margin-left: 5%;
+  margin-right: auto;
+  text-align: left;
+}
+
+@-webkit-keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  to {
+    opacity: 0.95;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  to {
+    opacity: 0.95;
+    transform: translate3d(0, 0, 0);
+  }
 }
