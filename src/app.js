@@ -22,7 +22,6 @@ db.on('error', (err) => {
 
 
 const app = express();
-app.use(express.static('dist/'));
 
 app.set('views', upath.resolve('./src/pug/pages'));
 app.set('view engine', 'pug');
@@ -34,14 +33,14 @@ app.get('/', (req, res) => {
   });
 });
 
-app.get('/index', (req, res) => {
+app.get('/index.html', (req, res) => {
   const intro = fs.readFileSync('./content/intro.txt', 'UTF-8', 'r');
   res.render('index', {
     intro: intro,
   });
 });
 
-app.get('/writing', (req, res) => {
+app.get('/writing.html', (req, res) => {
   Article.find({}, function(err, writing) {
     res.render('writing', {
       journals: writing,
@@ -50,6 +49,7 @@ app.get('/writing', (req, res) => {
 });
 
 
+app.use(express.static('dist/'));
 
 
 app.listen(3000, () => {
