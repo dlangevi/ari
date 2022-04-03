@@ -27,7 +27,6 @@ db.once('open', () => {
 });
 
 function _processFile(filePath) {
-  console.log(filePath)
   if ( filePath.match(/\.pug$/) && !filePath.match(/include/) && !filePath.match(/mixin/) && !filePath.match(/\/pug\/layouts\//)) {
     const extras = {};
 

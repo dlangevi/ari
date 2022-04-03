@@ -5,7 +5,7 @@ import sh from 'shelljs';
 import prettier from 'prettier';
 
 export default function renderPug(filePath, extras = {}) {
-  const destPath = filePath.replace(/src\/pug\/\pages/, 'dist').replace(
+  const destPath = filePath.replace(/src\/pug\/\pages/, 'docs').replace(
       /\.pug$/, '.html');
   const srcPath = upath.resolve('./src');
 

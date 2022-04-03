@@ -8,7 +8,7 @@ import sh from 'shelljs';
 const packageJSON = JSON.parse(fs.readFileSync('./package.json'));
 
 const stylesPath = '../src/scss/styles.scss';
-const destPath = upath.resolve('./dist/css/styles.css');
+const destPath = upath.resolve('./docs/css/styles.css');
 
 export default function renderSCSS() {
   const results = sass.renderSync({
